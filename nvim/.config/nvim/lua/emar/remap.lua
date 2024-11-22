@@ -19,8 +19,6 @@ Map('v', '<S-Tab>', '<gv')
 Map('n', '<leader>t', '<Plug>PlenaryTestFile')
 
 -- personal remaps
-Map('i', 'jj', '<Esc>');
-Map('v', 'fj', '<Esc>');
 Map('n', '<leader><leader>x', function ()
   vim.cmd('w')
   vim.cmd('so %')
