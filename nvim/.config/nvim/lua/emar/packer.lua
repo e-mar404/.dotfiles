@@ -40,7 +40,6 @@ return require('packer').startup(function(use)
     {'ThePrimeagen/harpoon'},
     {'ThePrimeagen/vim-be-good'},
     {'mbbill/undotree'},
-    {'tpope/vim-fugitive'},
   }
 
   -- color themes
