@@ -107,24 +107,28 @@ require('mason-lspconfig').setup({
       lspconfig.gopls.setup {}
     end,
 
-    htmx = function ()
+    htmx = function()
      lspconfig.htmx.setup {}
     end,
 
-    cssls = function ()
+    cssls = function()
       lspconfig.cssls.setup {}
     end,
 
-    ruby_lsp = function ()
+    ruby_lsp = function()
       lspconfig.ruby_lsp.setup {}
     end,
 
-    hls = function ()
+    hls = function()
       lspconfig.hls.setup {}
     end,
 
-    marksman = function ()
+    marksman = function()
       lspconfig.marksman.setup {}
+    end,
+
+    ocamllsp = function()
+      lspconfig.ocamllsp.setup {}
     end,
   }
 })
