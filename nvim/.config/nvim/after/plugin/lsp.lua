@@ -63,11 +63,8 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
 	  'eslint',
+    'ts_ls',
 	  'lua_ls',
-    'html',
-    'htmx',
-    'gopls',
-    'ruby_lsp',
   },
   handlers = {
     lua_ls = function()
@@ -99,35 +96,39 @@ require('mason-lspconfig').setup({
       })
     end,
 
-    ltex = function()
+    ltex = function ()
       lspconfig.ltex.setup {}
     end,
 
-    gopls = function()
+    eslint = function ()
+      lspconfig.eslint.setup {}
+    end,
+
+    ts_ls = function ()
+      lspconfig.ts_ls.setup {}
+    end,
+
+    gopls = function ()
       lspconfig.gopls.setup {}
     end,
 
-    htmx = function()
-     lspconfig.htmx.setup {}
-    end,
-
-    cssls = function()
+    cssls = function ()
       lspconfig.cssls.setup {}
     end,
 
-    ruby_lsp = function()
+    ruby_lsp = function ()
       lspconfig.ruby_lsp.setup {}
     end,
 
-    hls = function()
+    hls = function ()
       lspconfig.hls.setup {}
     end,
 
-    marksman = function()
+    marksman = function ()
       lspconfig.marksman.setup {}
     end,
 
-    ocamllsp = function()
+    ocamllsp = function ()
       lspconfig.ocamllsp.setup {}
     end,
   }
