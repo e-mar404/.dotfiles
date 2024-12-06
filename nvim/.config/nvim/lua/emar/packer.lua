@@ -52,8 +52,7 @@ return require('packer').startup(function(use)
 
   -- personal plugins
   -- dev
-  use '~/plugins/tooltip.nvim'
+  -- use '~/plugins/tooltip.nvim'
 
-  -- prod
-  -- use 'e-mar404/tooltip.nvim'
+  use 'e-mar404/tooltip.nvim'
 end)
