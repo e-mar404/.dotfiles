@@ -3,5 +3,6 @@ require('tooltip').setup({
   patterns = {
     [".kts"] = "kotlin %s",
     [".py"] = "python %s",
+    [".go"] = "go run .",
   },
 })
