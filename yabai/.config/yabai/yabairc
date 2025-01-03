@@ -9,6 +9,8 @@ yabai -m config bottom_padding 12
 yabai -m config left_padding   12
 yabai -m config right_padding  12
 yabai -m config window_gap     12
+yabai -m config normal_window_opacity 0.3
+yabai -m config window_opacity on
 
 yabai -m config mouse_follows_focus on
 yabai -m config mouse_modifier alt
@@ -21,5 +23,6 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
 
 sudo yabai --load-sa
