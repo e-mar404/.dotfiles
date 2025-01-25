@@ -1,12 +1,10 @@
 cat << "EOF"
-                                          _ _       __    _ _    
    ___     ___    _ __    __ _      _ _  | | |     /  \  | | |   
   / -_)   |___|  | '  \  / _` |    | '_| |_  _|   | () | |_  _|  
   \___|   _____  |_|_|_| \__,_|   _|_|_   _|_|_   _\__/   _|_|_  
 _|"""""|_|     |_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
 "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
 EOF
-
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -33,6 +31,10 @@ eval "$(zoxide init zsh)"
 export PATH=$PATH:"$HOME/.local/bin"
 bindkey -s ^f "tmux_sessionizer\n"
 bindkey -s ^x "tmux kill-server\n"
+
+# needed for github to sign things with gpg
+GPG_TTY=$(tty)
+export GPG_TTY
 # <<< personal <<<
 
 # >>> programming languages >>>
@@ -69,7 +71,3 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# needed for github to sign things with gpg
-GPG_TTY=$(tty)
-export GPG_TTY
