@@ -16,7 +16,7 @@ vim.opt.undofile= true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.scrolloff = 15
+vim.opt.scrolloff = 45
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
@@ -35,3 +35,11 @@ vim.opt.conceallevel = 1
 -- spell
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
+
+--autocmd for text wrap 
+vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
+  pattern = { '*.md'},
+  callback = function ()
+    vim.opt.textwidth = 80
+  end,
+})

@@ -4,5 +4,6 @@ require('tooltip').setup({
     [".kts"] = "kotlin %s",
     [".py"] = "python %s",
     [".go"] = "go run .",
+    [".exs"] = "elixir %s",
   },
 })
