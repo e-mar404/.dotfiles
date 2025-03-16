@@ -1,3 +1,4 @@
 font-size = 16 
 window-inherit-font-size = false
-theme = 'rose-pine'
+keybind = ctrl+shift+p=scroll_page_lines:-1
+keybind = ctrl+shift+n=scroll_page_lines:1
