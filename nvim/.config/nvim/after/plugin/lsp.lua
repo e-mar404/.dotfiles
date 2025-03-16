@@ -104,9 +104,12 @@ for server_name, opts in pairs(lsp_servers) do
     lspconfig[server_name].setup(opts)
   end
 
-  table.insert(lsp_server_names, server_name)
   table.insert(mason_handlers, setup_function)
+  if server_name ~= "sourcekit" then 
+    table.insert(lsp_server_names, server_name)
+  end
 end
+
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
