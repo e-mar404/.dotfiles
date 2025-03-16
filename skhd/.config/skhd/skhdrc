@@ -10,7 +10,7 @@ alt - g: yabai -m display --focus east
 shift + alt - s: yabai -m window --display prev 
 shift + alt - g: yabai -m window --display next
 
-shift + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+shift + alt - f : yabai -m window --toggle float --grid 1:5:1:0:3:1
 
 shift + alt - m : yabai -m window --toggle zoom-fullscreen
 
