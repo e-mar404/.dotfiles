@@ -13,21 +13,20 @@ cmp.setup({
   mapping = {
     ['<C-l>'] = cmp.mapping.confirm({select = true}),
     ['<C-h>'] = cmp.mapping.abort(),
-    ['<C-k>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
-    ['<C-j>'] = cmp.mapping.select_next_item({behavior = 'select'}),
-
+    ['<C-p>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
+    ['<C-n>'] = cmp.mapping.select_next_item({behavior = 'select'}),
     ['<CR>'] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-            if ls.expandable() then
-                ls.expand()
-            else
-                cmp.confirm({
-                    select = true,
-                })
-            end
+      if cmp.visible() then
+        if ls.expandable() then
+          ls.expand()
         else
-            fallback()
+          cmp.confirm({
+            select = true,
+          })
         end
+      else
+        fallback()
+      end
     end),
 
     ["<Tab>"] = cmp.mapping(function(fallback)
@@ -58,20 +57,11 @@ cmp.setup({
   },
 })
 
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {
-	  'eslint',
-    'ts_ls',
-	  'lua_ls',
-  },
-  handlers = {
-    lua_ls = function()
-      require('neodev').setup()
-
-      lspconfig.lua_ls.setup ({
-        capabilities = lsp_capabilities,
+local lsp_servers = {
+	  eslint = {},
+    ts_ls = {},
+	  lua_ls = {
+      capabilities = lsp_capabilities,
         settings = {
           Lua = {
             runtime = {
@@ -93,49 +83,34 @@ require('mason-lspconfig').setup({
             },
           },
         },
-      })
-    end,
+      },
+    ltex = {},
+    gopls = {},
+    cssls = {},
+    ruby_lsp = {},
+    marksman = {},
+    ocamllsp = {},
+    elixirls = {},
+    sourcekit = {
+      cmd = { '/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp' },
+      root_dir = lspconfig.util.root_pattern('*.swift'),
+    },
+ }
 
-    ltex = function ()
-      lspconfig.ltex.setup {}
-    end,
+local lsp_server_names = {}
+local mason_handlers = {}
+for server_name, opts in pairs(lsp_servers) do
+  local setup_function = function ()
+    lspconfig[server_name].setup(opts)
+  end
 
-    eslint = function ()
-      lspconfig.eslint.setup {}
-    end,
+  table.insert(lsp_server_names, server_name)
+  table.insert(mason_handlers, setup_function)
+end
 
-    ts_ls = function ()
-      lspconfig.ts_ls.setup {}
-    end,
-
-    gopls = function ()
-      lspconfig.gopls.setup {}
-    end,
-
-    cssls = function ()
-      lspconfig.cssls.setup {}
-    end,
-
-    ruby_lsp = function ()
-      lspconfig.ruby_lsp.setup {}
-    end,
-
-    hls = function ()
-      lspconfig.hls.setup {}
-    end,
-
-    marksman = function ()
-      lspconfig.marksman.setup {}
-    end,
-
-    ocamllsp = function ()
-      lspconfig.ocamllsp.setup {}
-    end,
-  }
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  automatic_installation = true,
+  ensure_installed = lsp_server_names,
+  handlers = mason_handlers,
 })
-
--- not on mason
-lspconfig.sourcekit.setup {
-  cmd = { '/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp' },
-  root_dir = lspconfig.util.root_pattern('*.swift'),
-}
