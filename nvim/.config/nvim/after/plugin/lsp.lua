@@ -99,17 +99,17 @@ local lsp_servers = {
 
 local lsp_server_names = {}
 local mason_handlers = {}
-for server_name, opts in pairs(lsp_servers) do
-  local setup_function = function ()
-    lspconfig[server_name].setup(opts)
-  end
 
-  table.insert(mason_handlers, setup_function)
+for server_name, opts in pairs(lsp_servers) do
   if server_name ~= "sourcekit" then 
+    local setup_function = function ()
+      lspconfig[server_name].setup(opts)
+    end
+
     table.insert(lsp_server_names, server_name)
+    mason_handlers[server_name] = setup_function
   end
 end
-
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
