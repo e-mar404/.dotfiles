@@ -18,6 +18,11 @@ Map('v', '<S-Tab>', '<gv')
 -- plenary.nvim
 Map('n', '<leader>t', '<Plug>PlenaryTestFile')
 
+-- lsp
+Map('n', '<leader>rn', vim.lsp.buf.rename, {})
+Map('n', '<leader>gd', vim.lsp.buf.definition, {})
+Map('n', '<leader>of', vim.diagnostic.open_float, {})
+
 -- personal remaps
 Map('n', '<leader><leader>x', function ()
   vim.cmd('w')
