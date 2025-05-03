@@ -1,0 +1,28 @@
+source ~/.p10k.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# >>> personal >>>
+alias build="/bin/zsh build.sh"
+alias run="/bin/zsh run.sh"
+alias zshrc="nvim ~/.zshrc"
+alias nixconf="sudo nvim /etc/nixos/configuration.nix"
+
+eval "$(zoxide init zsh)"
+
+export PATH=$PATH:"$HOME/.local/bin"
+bindkey -s ^f "tmux_sessionizer\n"
+bindkey -s ^x "tmux kill-server\n"
+
+cat << "EOF"
+   ___     ___    _ __    __ _      _ _  | | |     /  \  | | |   
+  / -_)   |___|  | '  \  / _` |    | '_| |_  _|   | () | |_  _|  
+  \___|   _____  |_|_|_| \__,_|   _|_|_   _|_|_   _\__/   _|_|_  
+_|"""""|_|     |_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+EOF
+# <<< personal <<<
+
