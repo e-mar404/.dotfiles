@@ -124,6 +124,7 @@
     opam
     gcc
     elixir
+    unzip
     nodejs_23
     wl-clipboard
     hyprlock
