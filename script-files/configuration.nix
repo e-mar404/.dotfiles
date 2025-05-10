@@ -120,7 +120,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
-    kitty # required for the default Hyprland config
+    ruby
+    opam
+    gcc
+    nodejs_23
     wl-clipboard
     hyprlock
     neofetch
