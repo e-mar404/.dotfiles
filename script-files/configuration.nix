@@ -122,6 +122,7 @@
     neovim
     kitty # required for the default Hyprland config
     wl-clipboard
+    hyprlock
     neofetch
     pavucontrol
     ripgrep
