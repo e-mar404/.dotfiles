@@ -1,0 +1,9 @@
+archive
+script-files
+
+# anything under this is temp due to testing
+.local
+nvim
+hyperland
+tmux
+
