@@ -123,6 +123,7 @@
     ruby
     opam
     gcc
+    elixir
     nodejs_23
     wl-clipboard
     hyprlock
