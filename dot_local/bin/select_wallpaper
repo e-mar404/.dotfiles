@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+WALLPAPER_DIR="$HOME/wallpapers/"
+SELECTED_WALLPAPER=$(find "$WALLPAPER_DIR" -type f | fzf)
+hyprctl hyprpaper reload ,"$SELECTED_WALLPAPER"

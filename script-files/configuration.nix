@@ -120,6 +120,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
+    ripgrep
     ruby
     opam
     gcc
@@ -128,10 +129,10 @@
     nodejs_23
     wl-clipboard
     hyprlock
+    hyprpaper
     waybar
-    neofetch
     pavucontrol
-    ripgrep
+    neofetch
     go
     gh
     git

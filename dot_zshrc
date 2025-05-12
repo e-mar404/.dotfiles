@@ -14,6 +14,7 @@ alias nixconf="sudo nvim /etc/nixos/configuration.nix"
 eval "$(zoxide init zsh)"
 
 export PATH=$PATH:"$HOME/.local/bin"
+bindkey -s ^w "select_wallpaper\n"
 bindkey -s ^f "tmux_sessionizer\n"
 bindkey -s ^x "tmux kill-server\n"
 
