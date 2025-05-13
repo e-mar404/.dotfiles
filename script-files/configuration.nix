@@ -147,6 +147,8 @@
     zsh-powerlevel10k
     zsh-autosuggestions
     zsh-syntax-highlighting
+    _1password-gui
+    _1password-cli
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
