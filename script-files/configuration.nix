@@ -123,8 +123,10 @@
     ripgrep
     ruby
     opam
+    gnumake
     gcc
     elixir
+    opam
     unzip
     nodejs_23
     wl-clipboard
