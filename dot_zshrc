@@ -10,8 +10,10 @@ alias build="/bin/zsh build.sh"
 alias run="/bin/zsh run.sh"
 alias zshrc="nvim ~/.zshrc"
 alias nixconf="sudo nvim /etc/nixos/configuration.nix"
+export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-eval "$(zoxide init zsh)"
+eval `zoxide init zsh`
+eval `ssh-agent`
 
 export PATH=$PATH:"$HOME/.local/bin"
 bindkey -s ^w "select_wallpaper\n"
@@ -27,6 +29,7 @@ _|"""""|_|     |_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|
 EOF
 # <<< personal <<<
 
+# <<< programming languages <<<
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
@@ -34,6 +37,6 @@ EOF
 # This section can be safely removed at any time if needed.
 [[ ! -r '/home/emar/.opam/opam-init/init.zsh' ]] || source '/home/emar/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
-
 export PATH=$PATH:"/usr/local/go/bin"
 export PATH=$PATH:$(go env GOPATH)/bin/
+# >>> programming languages >>>
