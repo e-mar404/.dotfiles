@@ -13,7 +13,6 @@ alias nixconf="sudo nvim /etc/nixos/configuration.nix"
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 eval `zoxide init zsh`
-eval `ssh-agent`
 
 export PATH=$PATH:"$HOME/.local/bin"
 bindkey -s ^w "select_wallpaper\n"

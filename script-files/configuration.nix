@@ -115,6 +115,10 @@
   # Hyperland stuff
   programs.hyprland.enable = true; # enable Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
