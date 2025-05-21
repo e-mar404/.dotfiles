@@ -120,6 +120,13 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
+  # Aliases
+  environment.shellAliases = {
+    vim = "nvim .";
+    zshrc = "nvim ~/.local/shared/chezmoi/dot_zshrc";
+    nixconf = "nvim ~/.local/shared/chezmoi/script-files/configuration.nix";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
