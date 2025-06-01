@@ -132,6 +132,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    mako
+    meson
+    pango
+    cairo
+    gdk-pixbuf
+    dbus
+    scdoc
     neovim
     ripgrep
     ruby
