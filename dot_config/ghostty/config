@@ -1,3 +1,4 @@
 background-opacity = 0.9
-font-family = Fira Code Nerd Font Med
+font-family = Monocraft Nerd Font
 font-size = 20
+theme = catppuccin-frappe
