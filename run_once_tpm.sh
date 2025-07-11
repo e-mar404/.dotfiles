@@ -1,3 +1,7 @@
 #! /usr/bin/env bash
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+$TpmDir="~/.tmux/plugins/tpm"
+
+if [ ! -d "$TpmDir" ] ; then
+    git clone https://github.com/tmux-plugins/tpm $TpmDir
+fi
