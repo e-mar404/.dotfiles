@@ -118,9 +118,9 @@
   programs.hyprland.enable = true; # enable Hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  ];
+  # fonts.packages = with pkgs; [
+  #   (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  # ];
 
   # Aliases
   environment.shellAliases = {
@@ -148,7 +148,7 @@
     elixir
     opam
     unzip
-    nodejs_23
+    nodejs_24
     wl-clipboard
     hyprlock
     hyprpaper
