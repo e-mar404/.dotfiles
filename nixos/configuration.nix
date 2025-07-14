@@ -44,9 +44,9 @@
     allowUnfree = true;
   };
   
-  # fonts.packages = with pkgs; [
-  #   (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  # ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
  
   security.rtkit.enable = true;
 

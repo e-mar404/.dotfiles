@@ -50,6 +50,7 @@
       discord
       obsidian
       syncthing
+      monocraft
     ];
   };
 }
