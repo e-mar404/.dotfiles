@@ -48,6 +48,8 @@
       _1password-gui
       _1password-cli
       discord
+      obsidian
+      syncthing
     ];
   };
 }
