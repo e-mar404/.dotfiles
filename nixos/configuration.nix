@@ -12,10 +12,11 @@
       ./services.nix
       ./programs.nix
       ./environment.nix
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   nix.nixPath = [ 
+    "/home/emar/.nix-defexpr/channels"
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
     "nixos-config=/home/emar/nixos/configuration.nix" 
     "/nix/var/nix/profiles/per-user/root/channels"
@@ -44,9 +45,9 @@
     allowUnfree = true;
   };
   
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-  ];
+  # fonts.packages = with pkgs; [
+  #   nerd-fonts.fira-code
+  # ];
  
   security.rtkit.enable = true;
 

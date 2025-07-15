@@ -11,7 +11,8 @@
       };
     };
     printing.enable = true;
-    pulseaudio.enable = false;
+    fail2ban.enable = true;
+    # pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
