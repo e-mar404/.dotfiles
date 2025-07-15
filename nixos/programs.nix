@@ -2,6 +2,7 @@
 
 {
   programs = {
+    gnupg.agent.enable = true;
     hyprland.enable = true;
     firefox.enable = true;
     fzf = { 

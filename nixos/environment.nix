@@ -24,7 +24,7 @@
       elixir
       opam
       unzip
-      # nodejs_24
+      nodejs_24
       wl-clipboard
       hyprlock
       hyprpaper
