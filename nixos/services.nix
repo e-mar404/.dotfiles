@@ -12,16 +12,12 @@
     };
     printing.enable = true;
     fail2ban.enable = true;
-    # pulseaudio.enable = false;
+    pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-    };
-    syncthing = {
-      enable = true;
-      openDefaultPorts = true;
     };
   };
 }
