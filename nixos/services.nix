@@ -19,5 +19,9 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    syncthing = {
+      enable = true;
+      openDefaultPorts = true;
+    };
   };
 }
