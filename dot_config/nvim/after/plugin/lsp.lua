@@ -91,17 +91,13 @@ local lsp_servers = {
     marksman = {},
     ocamllsp = {},
     elixirls = {},
-    sourcekit = {
-      cmd = { '/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp' },
-      root_dir = lspconfig.util.root_pattern('*.swift'),
-    },
  }
 
 local lsp_server_names = {}
 local mason_handlers = {}
 
 for server_name, opts in pairs(lsp_servers) do
-  if server_name ~= "sourcekit" then 
+  if server_name ~= "lua_ls" then 
     local setup_function = function ()
       lspconfig[server_name].setup(opts)
     end
@@ -111,7 +107,6 @@ for server_name, opts in pairs(lsp_servers) do
   end
 end
 
-require('mason').setup({})
 require('mason-lspconfig').setup({
   automatic_installation = true,
   ensure_installed = lsp_server_names,

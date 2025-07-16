@@ -51,6 +51,8 @@
       obsidian
       syncthing
       monocraft
+      fd
+      lua-language-server
     ];
   };
 }

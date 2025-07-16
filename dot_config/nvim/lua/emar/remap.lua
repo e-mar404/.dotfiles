@@ -1,4 +1,4 @@
-local tooltip = require("tooltip")
+-- local tooltip = require("tooltip")
 local Map = vim.keymap.set
 
 vim.g.mapleader = ' '
@@ -15,7 +15,7 @@ Map('v', 'K', ':m \'<-2<CR>gv=gv')
 Map('v', '<Tab>', '>gv')
 Map('v', '<S-Tab>', '<gv')
 
--- plenary.nvim
+-- -- plenary.nvim
 Map('n', '<leader>t', '<Plug>PlenaryTestFile')
 
 -- lsp
@@ -30,7 +30,7 @@ Map('n', '<leader><leader>x', function ()
 end)
 Map('n', '<leader>d', 'r✓')
 
--- universal-tooltip
+-- -- universal-tooltip
 Map('n', '<leader><leader>r', function ()
   tooltip.show()
 end)
