@@ -47,9 +47,17 @@ return {
   },
 
   {
-    "neovim/nvim-lspconfig",
-    config = function ()
-    end,
+    "williamboman/mason.nvim",
+    opts = {},
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
   },
 
   {

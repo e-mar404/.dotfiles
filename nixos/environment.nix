@@ -32,7 +32,6 @@
       pavucontrol
       neofetch
       go
-      gopls
       gh
       git
       lazygit
