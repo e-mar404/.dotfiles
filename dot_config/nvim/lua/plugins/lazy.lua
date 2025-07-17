@@ -1,8 +1,8 @@
-return { 
-  
+return {
+
   {
-   "nvim-telescope/telescope.nvim", 
-    branch = "master", 
+   "nvim-telescope/telescope.nvim",
+    branch = "master",
     dependencies = { {"nvim-lua/plenary.nvim"} },
   },
 
@@ -13,23 +13,23 @@ return {
     build = ":TSUpdate",
   },
 
-  { 
-    "ThePrimeagen/harpoon", 
+  {
+    "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
 
-  { 
+  {
     "ThePrimeagen/vim-be-good",
   },
 
-  { 
+  {
     "mbbill/undotree",
   },
 
-  { 
+  {
     "catppuccin/nvim",
-    name = "catppuccin", 
+    name = "catppuccin",
     priority = 1000,
   },
 
@@ -47,17 +47,9 @@ return {
   },
 
   {
-    "williamboman/mason.nvim",
-    opts = {},
-  },
-
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-      { "mason-org/mason.nvim", opts = {} },
-      "neovim/nvim-lspconfig",
-    },
+    "neovim/nvim-lspconfig",
+    config = function ()
+    end,
   },
 
   {
@@ -70,7 +62,7 @@ return {
     opts = {},
   },
 
-  { 
+  {
     "saadparwaiz1/cmp_luasnip",
     config = function ()
     end,
@@ -79,11 +71,11 @@ return {
 
   {
     "L3MON4D3/LuaSnip",
-    version = "v2.*", 
+    version = "v2.*",
     build = "make install_jsregexp",
   },
 
-  { 
+  {
     "folke/neodev.nvim",
     opts = {},
   },
