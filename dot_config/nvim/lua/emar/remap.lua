@@ -1,4 +1,4 @@
--- local tooltip = require("tooltip")
+local tooltip = require("tooltip")
 local Map = vim.keymap.set
 
 vim.g.mapleader = ' '
@@ -30,7 +30,12 @@ Map('n', '<leader><leader>x', function ()
 end)
 Map('n', '<leader>d', 'r✓')
 
--- -- universal-tooltip
+-- universal-tooltip
 Map('n', '<leader><leader>r', function ()
   tooltip.show()
 end)
+
+-- Obsidian
+Map("n", "<leader>ye", ":Obsidian yesterday", {})
+Map("n", "<leader>to", ":Obsidian today", {})
+Map("n", "<leader>tm", ":Obsidian tomorrow", {})

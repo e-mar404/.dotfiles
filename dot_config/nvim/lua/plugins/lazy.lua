@@ -90,11 +90,13 @@ return {
 
   {
     "obsidian-nvim/obsidian.nvim",
-    version = "*",
+
     lazy = false,
+
     event = {
       "BufReadPre /home/emar/notes/*/*.md",
     },
+
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
@@ -102,6 +104,8 @@ return {
     ---@module 'obsidian'
     ---@type obsidian.config
     opts = {
+      legacy_commands = false,
+
       workspaces = {
         {
           name = "personal",
@@ -112,13 +116,22 @@ return {
           path = "~/notes/work",
         },
       },
-    },
+      daily_notes = {
+        folder = "daily-notes",
+        default_tags = { "daily-notes" },
+        template = "templates/daily-notes.md",
+      },
 
-    daily_notes = {
-      folder = "daily-notes",
-      default_tags = { "daily-notes" },
-      template = "templates/daily-notes.md",
+      completion = {
+        nvim_cmp = true,
+        min_chars = 2,
+        create_new = true,
+      },
+
+      template = {
+        folder = "templates",
+      },
+
     },
   },
-
 }
