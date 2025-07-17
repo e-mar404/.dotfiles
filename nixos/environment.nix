@@ -53,6 +53,8 @@
       monocraft
       fd
       lua-language-server
+      marksman
+      ltex-ls
     ];
   };
 }

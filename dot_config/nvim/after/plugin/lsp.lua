@@ -3,11 +3,9 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('luasnip.loaders.from_vscode').lazy_load()
 
-local lsp_servers = {
-	  eslint = {},
-	  ts_ls = {},
+local nix_servers = {
 	  lua_ls = {
-      cmd = { "lua-lanugage-server" },
+      cmd = { "lua-language-server" },
       capabilities = lsp_capabilities,
         settings = {
           Lua = {
@@ -27,26 +25,31 @@ local lsp_servers = {
         },
       },
     ltex = {},
-    gopls = {},
-    cssls = {},
     marksman = {},
- }
+}
+
+local mason_servers = {
+  eslint = {},
+  ts_ls = {},
+  gopls = {},
+  cssls = {},
+}
+
+for server_name, opts in pairs(nix_servers) do
+  lspconfig[server_name].setup(opts)
+end
 
 local lsp_server_names = {}
 local mason_handlers = {}
 
-for server_name, opts in pairs(lsp_servers) do
-  if server_name ~= "lua_ls" then
-    table.insert(lsp_server_names, server_name)
+for server_name, opts in pairs(mason_servers) do
+  table.insert(lsp_server_names, server_name)
 
-    local setup_function = function ()
-      lspconfig[server_name].setup(opts)
-    end
-
-    mason_handlers[server_name] = setup_function
-  else
+  local setup_function = function ()
     lspconfig[server_name].setup(opts)
   end
+
+  mason_handlers[server_name] = setup_function
 end
 
 require('mason-lspconfig').setup({

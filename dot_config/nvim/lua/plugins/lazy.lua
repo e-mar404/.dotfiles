@@ -87,4 +87,38 @@ return {
     "folke/neodev.nvim",
     opts = {},
   },
+
+  {
+    "obsidian-nvim/obsidian.nvim",
+    version = "*",
+    lazy = false,
+    event = {
+      "BufReadPre /home/emar/notes/*/*.md",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+
+    ---@module 'obsidian'
+    ---@type obsidian.config
+    opts = {
+      workspaces = {
+        {
+          name = "personal",
+          path = "~/notes/personal",
+        },
+        {
+          name = "work",
+          path = "~/notes/work",
+        },
+      },
+    },
+
+    daily_notes = {
+      folder = "daily-notes",
+      default_tags = { "daily-notes" },
+      template = "templates/daily-notes.md",
+    },
+  },
+
 }
