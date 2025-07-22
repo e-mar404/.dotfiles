@@ -36,6 +36,7 @@ Map('n', '<leader><leader>r', function ()
 end)
 
 -- Obsidian
-Map("n", "<leader>ye", ":Obsidian yesterday", {})
-Map("n", "<leader>to", ":Obsidian today", {})
-Map("n", "<leader>tm", ":Obsidian tomorrow", {})
+Map("n", "<leader>ye", ":Obsidian yesterday<CR>", {})
+Map("n", "<leader>to", ":Obsidian today<CR>", {})
+Map("n", "<leader>tm", ":Obsidian tomorrow<CR>", {})
+Map("n", "<leader>cc", ":Obsidian toggle_checkbox<CR>", {})
