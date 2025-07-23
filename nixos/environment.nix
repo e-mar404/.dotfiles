@@ -55,6 +55,12 @@
       lua-language-server
       marksman
       ltex-ls
+      hyprshot
+      jq
+      grim
+      slurp
+      libnotify
+      hyprpicker
     ];
   };
 }
