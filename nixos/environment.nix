@@ -61,6 +61,7 @@
       slurp
       libnotify
       hyprpicker
+      lua
     ];
   };
 }
