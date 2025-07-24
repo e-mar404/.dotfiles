@@ -63,6 +63,8 @@
       hyprpicker
       lua
       gnucash
+      stylua
+      luajitPackages.luacheck
     ];
   };
 }
