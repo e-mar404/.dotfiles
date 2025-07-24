@@ -2,7 +2,7 @@
 
 {
   environment = {
-    sessionVariables.NIXOS_OZONE_WL = "1"; # used for hyperland
+    sessionVariables.NIXOS_OZONE_WL = "1"; # used for hyprland
     shellAliases = {
       vim = "nvim .";
       zshrc = "nvim ~/.local/shared/chezmoi/dot_zshrc";
