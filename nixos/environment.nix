@@ -62,6 +62,7 @@
       libnotify
       hyprpicker
       lua
+      gnucash
     ];
   };
 }
