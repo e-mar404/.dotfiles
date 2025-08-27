@@ -15,46 +15,46 @@ moving to arch now ig
 - [!] in chezmoi make install scripts for the above
     - dont need to do those install scripts since i just need to the chezmoi one liner
 - [ ] after those install scripts are done then go through the programs in nixconf and make an installer for them for arch
-    ✓ neovim
-    ✓ tmux
-    ✓ fzf
-    ✓ ripgrep
-    ✓ ruby
-    ✓ opam
+    - [x] neovim
+    - [x] tmux
+    - [x] fzf
+    - [x] ripgrep
+    - [x] ruby
+    - [x] opam
     - gnumake (need more info)
-    ✓ gcc
-    ✓ elixir
-    ✓ unzip
-    ✓ node
-    ✓ wl-clipboard
-    ✓ hyprlock
-    ✓ hyprpaper
-    ✓ waybar
+    - [x] gcc
+    - [x] elixir
+    - [x] unzip
+    - [x] node
+    - [x] wl-clipboard
+    - [x] hyprlock
+    - [x] hyprpaper
+    - [x] waybar
     - pavucontrol (need more info)
-    ✓ neofetch
-    ✓ go
-    ✓ git
-    ✓ lazygit
-    ✓ google-chrome
-    ✓ postman
-    ✓ ghostty
-    ✓ zoxide
-    ✓ chezmoi
-    ✓ wofi
+    - [x] neofetch
+    - [x] go
+    - [x] git
+    - [x] lazygit
+    - [x] google-chrome
+    - [x] postman
+    - [x] ghostty
+    - [x] zoxide
+    - [x] chezmoi
+    - [x] wofi
     - oh-my-zsh (need more info)
     - zsh-powerlvel10k (need more info)
-    ✓ 1password
+    - [x] 1password
     - discord (installed an outdated version, need manual install script)
-    ✓ obsidian
-    ✓ syncthing
+    - [x] obsidian
+    - [x] syncthing
     - nerdfonts (need more info)
-    ✓ fd
-    ✓ jq
-    ✓ libnotify
-    ✓ hyprpicker
-    ✓ lua
-    ✓ gnucash
-    ✓ stylua
+    - [x] fd
+    - [x] jq
+    - [x] libnotify
+    - [x] hyprpicker
+    - [x] lua
+    - [x] gnucash
+    - [x] stylua
 
 - [x] get chezmoi working for arch and put all the conf files where they go
 - [x] sign in to all the apps needed
