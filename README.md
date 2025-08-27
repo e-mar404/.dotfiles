@@ -21,7 +21,7 @@ moving to arch now ig
     - [x] ripgrep
     - [x] ruby
     - [x] opam
-    - gnumake (need more info)
+    - [ ] gnumake (need more info)
     - [x] gcc
     - [x] elixir
     - [x] unzip
@@ -30,7 +30,7 @@ moving to arch now ig
     - [x] hyprlock
     - [x] hyprpaper
     - [x] waybar
-    - pavucontrol (need more info)
+    - [ ] pavucontrol (need more info)
     - [x] neofetch
     - [x] go
     - [x] git
@@ -41,13 +41,13 @@ moving to arch now ig
     - [x] zoxide
     - [x] chezmoi
     - [x] wofi
-    - oh-my-zsh (need more info)
-    - zsh-powerlvel10k (need more info)
+    - [ ] oh-my-zsh (need more info)
+    - [ ] zsh-powerlvel10k (need more info)
     - [x] 1password
     - discord (installed an outdated version, need manual install script)
     - [x] obsidian
     - [x] syncthing
-    - nerdfonts (need more info)
+    - [ ] nerdfonts (need more info)
     - [x] fd
     - [x] jq
     - [x] libnotify
