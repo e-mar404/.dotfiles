@@ -1,4 +1,5 @@
 archive
 script-files
+packages.txt
 *.gpg
 *.md

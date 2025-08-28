@@ -41,8 +41,8 @@ moving to arch now ig
     - [x] zoxide
     - [x] chezmoi
     - [x] wofi
-    - [ ] oh-my-zsh (need more info)
-    - [ ] zsh-powerlvel10k (need more info)
+    - [x] oh-my-zsh (need more info)
+    - [x] zsh-powerlvel10k (need more info)
     - [x] 1password
     - discord (installed an outdated version, need manual install script)
     - [x] obsidian

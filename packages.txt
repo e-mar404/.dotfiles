@@ -32,3 +32,8 @@ syncthing
 fd
 jq
 gnucash
+zsh
+zsh-completions
+zsh-theme-powerlevel10k-git
+man-db
+man-pages
