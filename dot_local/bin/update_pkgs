@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+pkgs_file='/home/emar/packages.txt'
+
+while read package; do
+  yay -S $package --needed --noconfirm
+done < "$pkgs_file"

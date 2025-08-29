@@ -14,14 +14,14 @@ moving to arch now ig
     - [x] chezmoi
 - [!] in chezmoi make install scripts for the above
     - dont need to do those install scripts since i just need to the chezmoi one liner
-- [ ] after those install scripts are done then go through the programs in nixconf and make an installer for them for arch
+- [x] after those install scripts are done then go through the programs in nixconf and make an installer for them for arch
     - [x] neovim
     - [x] tmux
     - [x] fzf
     - [x] ripgrep
     - [x] ruby
     - [x] opam
-    - [ ] gnumake (need more info)
+    - [ ] gnumake (need more info) no need
     - [x] gcc
     - [x] elixir
     - [x] unzip
@@ -30,7 +30,7 @@ moving to arch now ig
     - [x] hyprlock
     - [x] hyprpaper
     - [x] waybar
-    - [ ] pavucontrol (need more info)
+    - [x] pavucontrol (need more info) using easyeffects instead
     - [x] neofetch
     - [x] go
     - [x] git
@@ -47,7 +47,7 @@ moving to arch now ig
     - discord (installed an outdated version, need manual install script)
     - [x] obsidian
     - [x] syncthing
-    - [ ] nerdfonts (need more info)
+    - [x] nerdfonts (need more info)
     - [x] fd
     - [x] jq
     - [x] libnotify

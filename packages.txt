@@ -8,6 +8,7 @@ opam
 go
 elixir
 nodejs
+npm
 lua
 stylua
 gcc
@@ -37,3 +38,5 @@ zsh-completions
 zsh-theme-powerlevel10k-git
 man-db
 man-pages
+easyeffects
+ttf-nerd-fonts-symbols
