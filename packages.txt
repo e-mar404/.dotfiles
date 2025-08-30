@@ -12,6 +12,7 @@ npm
 lua
 stylua
 luacheck
+lua-language-server
 gcc
 unzip
 wl-clipboard
