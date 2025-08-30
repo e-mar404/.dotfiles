@@ -3,41 +3,34 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('luasnip.loaders.from_vscode').lazy_load()
 
-local nix_servers = {
-	  lua_ls = {
-      cmd = { "lua-language-server" },
-      capabilities = lsp_capabilities,
-        settings = {
-          Lua = {
-            runtime = {
-              version = 'LuaJIT',
-            },
-            diagnostics = {
-              globals = { color, "vim", 'P', 'Map', 'describe', 'it', 'before_each' },
-            },
-            workspace = {
-              library = vim.env.VIMRUNTIME,
-            },
-            telemetry = {
-              enable = false,
-            },
-          },
+local mason_servers = {
+  lua_ls = {
+    cmd = { "lua-language-server" },
+    capabilities = lsp_capabilities,
+    settings = {
+      Lua = {
+        runtime = {
+          version = 'LuaJIT',
+        },
+        diagnostics = {
+          globals = { color, "vim", 'P', 'Map', 'describe', 'it', 'before_each' },
+        },
+        workspace = {
+          library = vim.env.VIMRUNTIME,
+        },
+        telemetry = {
+          enable = false,
         },
       },
-    ltex = {},
-    marksman = {},
-}
-
-local mason_servers = {
+    },
+  },
+  ltex = {},
+  marksman = {},
   eslint = {},
   ts_ls = {},
   gopls = {},
   cssls = {},
 }
-
-for server_name, opts in pairs(nix_servers) do
-  lspconfig[server_name].setup(opts)
-end
 
 local lsp_server_names = {}
 local mason_handlers = {}
