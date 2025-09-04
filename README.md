@@ -44,7 +44,7 @@ moving to arch now ig
     - [x] oh-my-zsh (need more info)
     - [x] zsh-powerlvel10k (need more info)
     - [x] 1password
-    - discord (installed an outdated version, need manual install script)
+    - [x] discord (installed an outdated version, need manual install script)
     - [x] obsidian
     - [x] syncthing
     - [x] nerdfonts (need more info)
