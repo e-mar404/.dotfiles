@@ -1,3 +1,4 @@
+chezmoi
 git
 neovim
 tmux

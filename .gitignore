@@ -1,2 +1,3 @@
 syncthing.nix
 result
+dev_*.lua
