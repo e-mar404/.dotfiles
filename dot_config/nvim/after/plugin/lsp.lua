@@ -24,7 +24,6 @@ local mason_servers = {
       },
     },
   },
-  ltex = {},
   marksman = {},
   eslint = {},
   ts_ls = {},

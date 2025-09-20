@@ -21,6 +21,7 @@ Map('n', '<leader>t', '<Plug>PlenaryTestFile')
 -- lsp
 Map('n', '<leader>rn', vim.lsp.buf.rename, {})
 Map('n', '<leader>gd', vim.lsp.buf.definition, {})
+Map('n', '<leader>ca', vim.lsp.buf.code_action, {})
 Map('n', '<leader>of', vim.diagnostic.open_float, {})
 
 -- personal remaps
@@ -39,4 +40,5 @@ end)
 Map("n", "<leader>ye", ":Obsidian yesterday<CR>", {})
 Map("n", "<leader>to", ":Obsidian today<CR>", {})
 Map("n", "<leader>tm", ":Obsidian tomorrow<CR>", {})
-Map("n", "<leader>cc", ":Obsidian toggle_checkbox<CR>", {})
+Map("n", "<leader>on", ":Obsidian new<CR>", {})
+Map("n", "<leader>ch", require("obsidian.api").set_checkbox, {})

@@ -1,18 +1,20 @@
-    -- config = function ()
-    --   require("nvim-treesitter.configs").setup {
-    --     ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-    --
-    --     sync_install = false,
-    --
-    --     auto_install = true,
-    --
-    --     ignore_install = { "javascript" },
-    --
-    --     highlight = {
-    --       enable = true,
-    --       disable = { "c", "rust" }
-    --     },
-    --
-    --     additional_vim_regex_highlighting = { "html" }
-    --   }
-    -- end,
+local ts = require("nvim-treesitter")
+
+ts.setup {
+  install_dir = vim.fn.stdpath('data') .. '/site',
+  ensure_installed = {
+    "go",
+    "javascript",
+    "lua",
+    "markdown",
+  },
+}
+
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+  pattern = { '*.md'},
+  callback = function ()
+    vim.treesitter.start()
+    -- vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    -- vim.wo.foldmethod = "expr"
+  end,
+})
