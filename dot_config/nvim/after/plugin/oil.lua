@@ -2,6 +2,9 @@ local oil = require "oil"
 
 oil.setup {
   default_file_explorer = true,
+  keymaps = {
+    ["<C-h>"] = false,
+  },
   columns = {
     "mtime",
     "icon",

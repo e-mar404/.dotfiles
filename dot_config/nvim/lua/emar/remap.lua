@@ -3,9 +3,6 @@ local Map = vim.keymap.set
 
 vim.g.mapleader = ' '
 
--- go to explore page
-Map('n', '<leader>en', ':Ex<CR>')
-
 -- will take yanked text and copy it to clipboard
 Map('v', '<leader>y', '"+y')
 
