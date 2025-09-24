@@ -1,3 +1,4 @@
+xwaylandvideobridge
 tree-sitter-cli
 easyeffects
 chezmoi
