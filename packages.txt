@@ -1,3 +1,8 @@
+grim
+slurp
+pipewire
+wireplumber
+xdg-desktop-portal-hyprland-git
 xwaylandvideobridge
 tree-sitter-cli
 easyeffects
