@@ -8,7 +8,6 @@ tree-sitter-cli
 easyeffects
 chezmoi
 git
-neovim
 tmux
 fzf
 ripgrep
