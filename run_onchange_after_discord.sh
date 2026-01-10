@@ -5,9 +5,9 @@ sudo rm -rf /opt/Discord
 sudo rm /usr/bin/Discord
 sudo rm /usr/share/applications/discord.desktop
 
-curl -O "https://stable.dl2.discordapp.net/apps/linux/0.0.115/discord-0.0.115.tar.gz"
+curl -O "https://stable.dl2.discordapp.net/apps/linux/0.0.119/discord-0.0.119.tar.gz"
 
-sudo tar -zxvf "discord-0.0.115.tar.gz" -C /opt
+sudo tar -zxvf "discord-0.0.119.tar.gz" -C /opt
 
 sudo ln -sf -v /opt/Discord/Discord /usr/bin/Discord
 
