@@ -8,35 +8,18 @@
       zshrc = "nvim ~/.local/shared/chezmoi/dot_zshrc";
     };
     systemPackages = with pkgs; [
-      mako
-      meson
-      pango
-      cairo
-      gdk-pixbuf
-      dbus
-      scdoc
       neovim
       ripgrep
-      ruby
-      opam
-      gnumake
-      gcc
-      elixir
-      opam
       unzip
-      nodejs_24
       wl-clipboard
       hyprlock
       hyprpaper
+      easyeffects
       waybar
-      pavucontrol
       neofetch
-      go
-      gh
       git
       lazygit
       google-chrome
-      postman
       ghostty
       zoxide
       chezmoi
@@ -46,25 +29,11 @@
       zsh-autosuggestions
       zsh-syntax-highlighting
       _1password-gui
-      _1password-cli
       discord
-      obsidian
-      syncthing
       monocraft
-      fd
-      lua-language-server
-      marksman
-      ltex-ls
       hyprshot
-      jq
-      grim
-      slurp
       libnotify
       hyprpicker
-      lua
-      gnucash
-      stylua
-      luajitPackages.luacheck
     ];
   };
 }

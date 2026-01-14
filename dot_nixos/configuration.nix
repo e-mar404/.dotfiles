@@ -10,7 +10,6 @@
       ./users.nix
       ./network.nix
       ./services.nix
-      ./syncthing.nix
       ./programs.nix
       ./environment.nix
       /etc/nixos/hardware-configuration.nix
@@ -19,7 +18,7 @@
   nix.nixPath = [ 
     # "/home/emar/.nix-defexpr/channels"
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "nixos-config=/home/emar/nixos/configuration.nix" 
+    "nixos-config=/home/emar/.nixos/configuration.nix" 
     "/nix/var/nix/profiles/per-user/root/channels"
   ];
 
