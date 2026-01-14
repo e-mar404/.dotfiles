@@ -9,6 +9,7 @@
     };
     systemPackages = with pkgs; [
       neovim
+      go
       ripgrep
       unzip
       wl-clipboard

@@ -2,13 +2,13 @@
   services = {
     xserver = {
       enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
       xkb = {
         layout = "us";
         variant = "";
       };
     };
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
     printing.enable = true;
     fail2ban.enable = true;
     pulseaudio.enable = false;
