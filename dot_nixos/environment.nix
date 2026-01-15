@@ -10,6 +10,8 @@
     systemPackages = with pkgs; [
       neovim
       go
+      gcc
+      nodejs_24
       ripgrep
       unzip
       wl-clipboard
