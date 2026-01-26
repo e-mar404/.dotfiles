@@ -37,6 +37,7 @@
       hyprshot
       libnotify
       hyprpicker
+      vlc
     ];
   };
 }

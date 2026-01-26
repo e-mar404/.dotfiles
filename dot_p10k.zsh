@@ -29,6 +29,7 @@
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
 
 () {
+
   emulate -L zsh -o extended_glob
 
   # Unset all configuration options.
@@ -46,10 +47,17 @@
   local cyan='#9AEDFE'
   local white='#F1F1F0'
 
+  function prompt_nix_shell() {
+    if [ "$IN_NIX_SHELL" = "impure" ]; then 
+      p10k segment -b 2 -f 'cyan' -t ''
+    fi
+  }
+
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     # context                 # user@host
+    nix_shell                 # whether cur shell is within nix flake
     dir                       # current directory
     vcs                       # git status
     # command_execution_time  # previous command duration
