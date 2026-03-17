@@ -38,6 +38,10 @@
       libnotify
       hyprpicker
       vlc
+      opencode
+      anki
+      docker
+      lazydocker
     ];
   };
 }

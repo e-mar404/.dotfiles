@@ -18,7 +18,7 @@ eval "$(zoxide init zsh)"
 
 export PATH=$PATH:"$HOME/.local/bin"
 bindkey -s ^w "select_wallpaper\n"
-bindkey -s ^f "tmux_sessionizer\n"
+bindkey -s ^f "tsesh\n"
 bindkey -s ^x "tmux kill-server\n"
 
 # this is used only for wayland to interact correctly with qt applications
