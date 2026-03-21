@@ -1,6 +1,5 @@
 #! /usr/bin/env bash
 
-# Currently on 0.12-dev 2822c38
 git clone https://github.com/neovim/neovim
 
 pushd neovim
