@@ -1,7 +1,9 @@
 #! /usr/bin/env bash
 
 pkgs_file='./packages.txt'
-
+pkgs=''
 while read package; do
-  yay -S $package --needed --noconfirm
+  pkgs="$pkgs $package"
 done < "$pkgs_file"
+
+yay -S $pkgs --needed --noconfirm
