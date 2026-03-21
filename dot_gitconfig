@@ -1,3 +1,5 @@
 [user]
 	email = egmarinn@gmail.com
 	name = e-mar404
+[init]
+	defaultBranch = main
