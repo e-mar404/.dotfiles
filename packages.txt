@@ -31,7 +31,6 @@ ghostty
 zoxide
 neofetch
 1password
-discord
 jq
 zsh
 zsh-completions
