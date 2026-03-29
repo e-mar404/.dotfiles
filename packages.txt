@@ -40,3 +40,4 @@ man-pages
 easyeffects
 ttf-nerd-fonts-symbols
 zsh-theme-powerlevel10k-git
+beeper-v4-bin
