@@ -32,10 +32,3 @@ Map('n', '<leader>d', 'r✓')
 Map('n', '<leader><leader>r', function ()
   tooltip.show()
 end)
-
--- Obsidian
-Map("n", "<leader>ye", ":Obsidian yesterday<CR>", {})
-Map("n", "<leader>to", ":Obsidian today<CR>", {})
-Map("n", "<leader>tm", ":Obsidian tomorrow<CR>", {})
-Map("n", "<leader>on", ":Obsidian new<CR>", {})
-Map("n", "<leader>ch", require("obsidian.api").set_checkbox, {})
