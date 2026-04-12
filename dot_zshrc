@@ -22,7 +22,7 @@ bindkey -s ^f "tsesh\n"
 bindkey -s ^x "tmux kill-server\n"
 
 # this is used only for wayland to interact correctly with qt applications
-export QT_QPA_PLATFORM=xcb
+export QT_QPA_PLATFORM="wayland;xcb"
 
 cat << "EOF"
    ___     ___    _ __    __ _      _ _  | | |     /  \  | | |   
