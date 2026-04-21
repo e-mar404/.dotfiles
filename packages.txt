@@ -40,3 +40,12 @@ easyeffects
 ttf-nerd-fonts-symbols
 zsh-theme-powerlevel10k-git
 beeper-v4-bin
+gopls
+marksman
+qt6-wayland
+ticktick
+obs-studio
+linux-headers
+qt6-base
+qt6-svg
+v412loopback-dkms
