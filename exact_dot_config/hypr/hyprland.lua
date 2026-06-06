@@ -29,8 +29,9 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "ghostty"
-local fileManager = "nauitlus"
+local fileManager = "nautilus"
 local menu        = "fuzzel"
+local browser     = "zen-browser"
 
 
 -------------------
@@ -85,14 +86,14 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 5,
+        gaps_in  = 2.5,
         gaps_out = 5,
 
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border   = "#d6988c",
+            inactive_border = "#515745",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -109,7 +110,7 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 1.0,
+        active_opacity   = 0.9,
         inactive_opacity = 0.9,
 
         shadow = {
@@ -262,6 +263,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
