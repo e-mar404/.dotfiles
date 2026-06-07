@@ -101,7 +101,6 @@ networkmanager
 nodejs
 noto-fonts-cjk
 npm
-nvidia-580xx-dkms
 nvtop
 obs-studio
 opam
