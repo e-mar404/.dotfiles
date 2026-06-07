@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-$TpmDir="~/.tmux/plugins/tpm"
+tpmDir="~/.tmux/plugins/tpm"
 
-if [ ! -d "$TpmDir" ] ; then
-    git clone https://github.com/tmux-plugins/tpm $TpmDir
+if [[ !(-d "$tpmDir") ]] ; then
+    git clone https://github.com/tmux-plugins/tpm $tpmDir
 fi
