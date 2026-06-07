@@ -1,59 +1,154 @@
 {
-  "modules-left": ["hyprland/workspaces", "hyprland/mode"],
-  "modules-center": ["clock", "idle_inhibitor"],
-  "modules-right": ["tray", "network", "pulseaudio", "battery", "custom/power"],
+	"layer": "top",
+	"position": "bottom",
+  "height": 25,
 
-  "hyprland/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-  },
-  "clock": {
-    "format": "{:%I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
-    "on-click": "gnome-calendar",
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    },
-  },
-  "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ifname} ",
-    "format-disconnected": "", 
-    "max-length": 50,
-    "on-click": "ghostty -e 'nmtui'"
-  },
-  "tray": {
-    "icon-size": 15,
-    "spacing": 10,
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon} ",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": "0% {icon} ",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "easyeffects"
-  },
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "custom/power": {
-    "format": " ",
-    "on-click": "hyprlock",
-  },
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+  "modules-center" : [
+		"clock#date",
+		"clock#time"
+  ],
+
+	"modules-right": [
+    "tray",
+		"pulseaudio",
+		"network",
+		"memory",
+		"cpu",
+		"battery",
+	],
+
+	// Modules
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"clock#time": {
+		"interval": 10,
+		"format": "{:%H:%M}",
+		"tooltip": false
+	},
+
+	"clock#date": {
+		"interval": 20,
+		"format": "{:%e %b %Y}",
+		"tooltip": false
+		//"tooltip-format": "{:%e %B %Y}"
+	},
+
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": " {usage}%",
+		"format-alt": " {load}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"hyprland/language": {
+		"format": " {}",
+		"min-length": 5,
+		"on-click": "hyprlandmsg 'input * xkb_switch_layout next'",
+		"tooltip": false
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": " {used:0.1f}G/{total:0.1f}G",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-ethernet": " {ifname}",
+		"format-disconnected": "No connection",
+		"format-alt": " {ipaddr}/{cidr}",
+		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"enable-bar-scroll": true,
+		"format": "{name}"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"tooltip": false
+	},
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 18
+		//"spacing": 10
+	},
+
+  // idk if im going to keep the arrows or not, i'll keep one here in case I do want it later so I dont have to find the triangle icon
+	// "custom/arrow1": {
+	// 	"format": "",
+	// 	"tooltip": false
+	// },
 }
