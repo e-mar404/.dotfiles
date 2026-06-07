@@ -12,7 +12,13 @@ Map('v', 'K', ':m \'<-2<CR>gv=gv')
 Map('v', '<Tab>', '>gv')
 Map('v', '<S-Tab>', '<gv')
 
--- -- plenary.nvim
+-- easier window movement
+Map('n', '<A-h>', ":winc h<CR>")
+Map('n', '<A-j>', ":winc j<CR>")
+Map('n', '<A-k>', ":winc k<CR>")
+Map('n', '<A-l>', ":winc l<CR>")
+
+-- plenary.nvim
 Map('n', '<leader>t', '<Plug>PlenaryTestFile')
 
 -- lsp
