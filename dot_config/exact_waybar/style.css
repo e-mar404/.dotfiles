@@ -37,7 +37,6 @@
 @define-color inactive	@purple;
 @define-color sound	@brpurple;
 @define-color network	@purple;
-@define-color memory	@braqua;
 @define-color cpu	@green;
 @define-color layout	@bryellow;
 @define-color battery	@aqua;
@@ -53,23 +52,22 @@
 	padding: 0;
 	box-shadow: none;
 	text-shadow: none;
-	icon-shadow: none;
+	/* -gtk-icon-shadow: none; */
+  font-family: "FontAwesome7Free-Solid", "JetBrainsMono Nerd Font", sans-serif;
 }
 
 /* The whole bar */
 #waybar {
 	background: rgba(40, 40, 40, 0.8784315725); /* #282828e0 */
 	color: @white;
-	font-family: JetBrains Mono, Siji;
 	font-size: 12pt;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 /* Each module */
 #battery,
 #clock,
 #cpu,
-#memory,
 #network,
 #pulseaudio,
 #tray,
@@ -83,7 +81,6 @@
 }
 
 /* Each critical module */
-#memory.critical,
 #cpu.critical,
 #battery.critical.discharging {
 	animation-timing-function: linear;
@@ -95,7 +92,6 @@
 
 /* Each warning */
 #network.disconnected,
-#memory.warning,
 #cpu.warning,
 #battery.warning.discharging {
 	color: @warning;
@@ -149,11 +145,6 @@
 #network {
 	background: @network;
 	color: @white;
-}
-
-#memory {
-	background: @memory;
-	color: @black;
 }
 
 #cpu {

@@ -137,6 +137,7 @@ ticktick
 tmux
 tree-sitter-cli
 ttf-nerd-fonts-symbols
+ttf-jetbrains-mono-nerd
 v4l2loopback-dkms
 vim
 vlc-luajit
@@ -149,6 +150,7 @@ wget
 wireless_tools
 wireplumber
 wl-clipboard
+woff2-font-awesome
 wpa_supplicant
 xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
