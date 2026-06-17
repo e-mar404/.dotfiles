@@ -46,6 +46,7 @@ local browser     = "zen-browser"
 hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar")
   hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("1password")
 end)
 
 
@@ -110,8 +111,8 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.9,
-        inactive_opacity = 0.9,
+        active_opacity   = 1.0,
+        inactive_opacity = 0.95,
 
         shadow = {
             enabled      = true,
@@ -264,6 +265,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
