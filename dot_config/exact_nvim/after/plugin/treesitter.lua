@@ -7,14 +7,16 @@ ts.setup {
     "javascript",
     "lua",
     "markdown",
+    "svelte",
+    "typescript"
   },
 }
 
-vim.api.nvim_create_autocmd({ 'BufEnter' }, {
-  pattern = { '*.md'},
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'md', 'svelte', 'html' },
   callback = function ()
     vim.treesitter.start()
-    -- vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-    -- vim.wo.foldmethod = "expr"
+    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.wo.foldmethod = "expr"
   end,
 })

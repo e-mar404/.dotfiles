@@ -1,3 +1,5 @@
 require("lsp.lua")
 require("lsp.go")
 require("lsp.markdown")
+require("lsp.svelte")
+require("lsp.typescript")
